@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title></title>
+    <title>M8 Pizza Inn</title>
+    <link rel="icon" type="image/png" href="./images/favicon.ico" sizes="16x16" />
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
     <!-- materiliaze design for bootstrap -->
     <link rel="stylesheet" href="css/mdb.min.css">
@@ -26,13 +27,13 @@
                 <div class="collapse navbar-collapse align-items-center" id="collapsibleNavbar">
                   <ul class="navbar-nav">
                       <li class="nav-item">
-                          <a class="nav-link" href="#head">Home</a>
+                          <a class="nav-link" href="#overlay">Home</a>
                         </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Order</a>
+                      <a class="nav-link" href="#make-order">Order</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Contact Us</a>
+                      <a class="nav-link" href="#contact">Contact Us</a>
                     </li>    
                   </ul>
                 </div>  
@@ -42,7 +43,7 @@
                   <div class="row">
                     <div class="col-md-12 mb-4 white-text text-center text">
                       <h1 class="h1-reponsive white-text text-uppercase font-weight-bold mb-0 pt-md-5 pt-5 pulse"><strong>M8 PIZZA INN</strong></h1>
-                      <a class="btn btn-red button floater" href="#">  Order Now!</a>
+                      <a class="btn btn-red button floater" href="#make-order">  Order Now!</a>
                     </div>
                   </div>
                 </div>
@@ -118,7 +119,7 @@
       
             <div class="col-md-4">
               <div class="card mb-2">
-                <img class="card-img-top" src="./images/6.jpg" alt="Card image cap">
+                <img class="card-img-top" src="./images/14.jpg" alt="Card image cap">
                 <div class="card-body">
                   <h5 class="card-title"> Spaghetti Pizza </h5>
                 </div>
@@ -140,7 +141,7 @@
               <div class="col-sm-5">
                 <form action="">
                     <label for="select">Select Your Flavor</label>
-                    <select class="browser-default custom-select custom-select-md mb-3 name">
+                    <select class="browser-default custom-select custom-select-md mb-3 name" id="name">
                       <!-- <option selected value="choose">Choose your flavor</option> -->
                       <option value="Chocolate Pizza">Chocolate Pizza</option>
                       <option value="Greek Pizza">Greek Pizza</option>
@@ -156,12 +157,14 @@
                     <option value="medium">Medium -- sh. 950</option>
                     <option value="small">Small -- sh. 650</option>
                   </select>
-                  <label for="crust">Choose your favorite Crust!</label>
+                  <label for="crust">Choose your favorite Crust</label>
                     <select class="browser-default custom-select custom-select-md mb-3" id="crust">
                         <option selected value="0">Select your preferred crust!</option>
-                      <option value="Crispy">Crispy -- sh. 300</option>
-                      <option value="Stuffed">Stuffed -- sh. 200</option>
-                      <option value="Gluten-free">Gluten-free-- sh. 180</option>
+                      <option value="Crispy">Crispy --- sh. 300</option>
+                      <option value="Stuffed">Stuffed --- sh. 200</option>
+                      <option value="Gluten-free">Gluten-free --- sh. 250</option>
+                      <option value="Flatbread">Flatbread --- sh. 300</option>
+                      <option value="Focaccia">Focaccia --- sh. 200</option>
                     </select>
                   <label for="Toppings">Select Your Toppings at sh. 100 each</label><br>
                     <div class="custom-control custom-checkbox custom-control-inline">
@@ -194,10 +197,10 @@
                 </form>
               </div>
               <div class="col-sm-7">
-                <div id="information">
+                <div id="infor">
                     <h1 class="h6-reponsive white-text text-lowercase pulse">Check Here</h6>
                 </div>
-                <div class="choise">
+                <div class="choice">
                   <h2>Your Order is:</h2>
                   <div id="your-orders">
                     <table class="table table-sm  pizzatable">
@@ -294,5 +297,10 @@
           </div>
         </div>
     </div>
+
+    <script src="js/mdb.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
