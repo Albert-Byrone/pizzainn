@@ -59,5 +59,20 @@ $(document).ready(function(){
       default:
         console.log("error");
     }
+
+  let topping_value = pTopping.length * 50;
+
+  if(pSize == "0") && (pCrust == '0'){
+    $("button.proceed").show();
+    $("#info").show();
+    $("div.choice").hide();
+    alert("Please select the Pizza size and crust");
+  }
+  else {
+    
+    $("button.proceed").hide();
+    $("#info").show();
+    $("div.choice").slideDown(1200);
+  }
   })
 })
