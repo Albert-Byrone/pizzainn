@@ -73,6 +73,11 @@ nav .navbar{
   #slogan{
     padding-top: 5%;
   }
+  #slogan p{
+    text-align: center;
+    line-height: 30px;
+    
+  }
 
 .card-title{
     text-align: center;
