@@ -55,7 +55,7 @@
       <!-- slogan section -->
       <div class="container carousel slide" data-ride="carousel"  id="slogan">
         <div class="row">
-          <div class="col-md-12 mb-4 black-text text-center text">
+          <div class="col-md-12  black-text text-center text">
               <h2>EXCLUSIVELY FRESH INGREDIENTS</h2>
             <p>
               In our kitchen we make sure that the dishes are prepared only from the highest quality products. Thanks to this, our pizza is a delicacy that can not be resisted!
@@ -124,6 +124,122 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    
+
+      <!-- order section -->
+
+      <div class="container-fluid order" id="make-order">
+        <div class="order-overlay">
+          <div class="controls-top text-center" id="Order-now"> 
+            <h2>Make an Order</h2>
+          </div>
+          <div class="row">
+              <div class="col-sm-5">
+                <form action="">
+                    <label for="select">Select Your Flavor</label>
+                    <select class="browser-default custom-select custom-select-md mb-3 name">
+                      <!-- <option selected value="choose">Choose your flavor</option> -->
+                      <option value="Chocolate Pizza">Chocolate Pizza</option>
+                      <option value="Greek Pizza">Greek Pizza</option>
+                      <option value="Neapolitan Pizza">Neapolitan Pizza</option>
+                      <option value="Iranian Pizza">Iranian Pizza</option>
+                      <option value="York-style Pizza">York-style Pizza</option>
+                      <option value="Spaghetti Pizza">Spaghetti Pizza</option>
+                    </select>
+                  <label for="select">Select Size</label>
+                  <select class="browser-default custom-select custom-select-md mb-3" id="size">
+                    <option selected value="0">Select size here</option>
+                    <option value="large">Large -- sh. 1500</option>
+                    <option value="medium">Medium -- sh. 950</option>
+                    <option value="small">Small -- sh. 650</option>
+                  </select>
+                  <label for="crust">Choose your favorite Crust!</label>
+                    <select class="browser-default custom-select custom-select-md mb-3" id="crust">
+                        <option selected value="0">Select your preferred crust!</option>
+                      <option value="Crispy">Crispy -- sh. 300</option>
+                      <option value="Stuffed">Stuffed -- sh. 200</option>
+                      <option value="Gluten-free">Gluten-free-- sh. 180</option>
+                    </select>
+                  <label for="Toppings">Select Your Toppings at sh. 100 each</label><br>
+                    <div class="custom-control custom-checkbox custom-control-inline">
+                      <input type="checkbox" class="custom-control-input" id="Pineapple" value="Pineapple" name="toppings">
+                      <label class="custom-control-label" for="Pineapple">Pineapple</label>
+                    </div>
+                    <div class="custom-control custom-checkbox custom-control-inline">
+                      <input type="checkbox" class="custom-control-input" id="Pepperoni" value=" Pepperoni" name="toppings">
+                      <label class="custom-control-label" for="Pepperoni">Pepperoni</label>
+                    </div>
+                    <div class="custom-control custom-checkbox custom-control-inline">
+                        <input type="checkbox" class="custom-control-input" id="Sausage" value="Sausage" name="toppings">
+                        <label class="custom-control-label" for="Sausage">Sausage</label>
+                    </div>
+                    <div class="custom-control custom-checkbox custom-control-inline">
+                        <input type="checkbox" class="custom-control-input" id="Garlic " value="Garlic" name="toppings">
+                        <label class="custom-control-label" for="Garlic">Garlic</label>
+                      </div>
+                      <div class="custom-control custom-checkbox custom-control-inline">
+                          <input type="checkbox" class="custom-control-input" id="Mushrooms" value="Mushrooms" name="toppings">
+                          <label class="custom-control-label" for="Mushrooms">Mushrooms</label>
+                        </div>
+                    <div class="custom-control custom-checkbox custom-control-inline">
+                      <input type="checkbox" class="custom-control-input" id="Raspberry" value="Raspberry" name="toppings">
+                      <label class="custom-control-label" for="Raspberry">Raspberry</label>
+                    </div>
+                    <br><br>
+                  <button type="submit" class="btn btn-secondary bg-secondary proceed">Proceed</button>
+                  
+                </form>
+              </div>
+              <div class="col-sm-7">
+                <div id="information">
+                    <h1 class="h6-reponsive white-text text-lowercase pulse">Check Here</h6>
+                </div>
+                <div class="choise">
+                  <h2>Your Order is:</h2>
+                  <div id="your-orders">
+                    <table class="table table-sm  pizzatable">
+                      <thead>
+                        <tr>
+                          <th scope="col">Name</th>
+                          <th scope="col">Size</th>
+                          <th scope="col">Crust</th>
+                          <th scope="col">Topping</th>
+                          <th scope="col">Total</th>
+                        </tr>
+                      </thead>
+                      <tbody id="ordersmade">
+                        <tr>
+                          <td id="pizzaname"></td>
+                          <td id="pizzasize"></td>
+                          <td id="pizzacrust"></td>
+                          <td id="pizzatopping"></td>
+                          <td id="totals"></td>
+                        </tr>                  
+                      </tbody>
+                    </table>
+                    <p id="pizzatotal"></p>
+                    <p id="totalbill"></p> 
+                    <p id="addedprice">Delivery will cost sh. 150</p>
+                    <p id="finallmessage"></p>
+                  </div>
+                  <button class="btn btn-secondary  bg-secondary addPizza">Add Pizza</button>
+                  <button class="btn btn-secondary bg-secondary " id="checkout">Checkout</button>
+                  <button class="btn btn-secondary deliver bg-secondary ">Home delivery?</button>
+                </div>
+                <div class="delivery"> 
+                    <form action="" id="form">
+                      <div class="form-group">
+                        <input type="text" id="name" class="form-control mb-3" placeholder="Name">
+                        <input type="number" id="phone" class="form-control mb-3" placeholder="Phone Number">
+                        <input type="text" id="location" class="form-control mb-3" placeholder="Location for delivery">
+                        <button class="btn btn-secondary bg-secondary " id="final-order">Confirm Order</button>
+                      </div>
+                    </form>
+                </div>
+              </div>
           </div>
         </div>
       </div>
