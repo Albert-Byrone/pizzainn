@@ -123,3 +123,14 @@ nav .navbar{
   padding-right: 10%;
 
 }
+
+#contact h2{
+    text-align: center;
+  }
+  #contact{
+    color: black;
+    background-color: #f2f2f2
+  }
+  #contactdetails h2{
+    text-align: left;
+  }
