@@ -14,7 +14,7 @@ function GetPizza (name,size,crust,topping,total){
 $(document).ready(function(){
   $("button.proceed").click(function(event){
     event.preventDefault();
-    let pName = $(".name selected:option").val();
+    let pName = $(".name option:selected").val();
     let pSize = $("#size option:selected").val();
     let pCrust = $("#crust option:selected").val();
     let pTopping = [];
@@ -89,7 +89,7 @@ $(document).ready(function(){
 
   // add button
   $("button.addPizza").click(function(){
-    let pName = $(".name selected:option").val();
+    let pName = $(".name option:selected").val();
     let pSize = $("#size option:selected").val();
     let pCrust = $("#crust option:selected").val();
     let pTopping = []; 
@@ -143,6 +143,19 @@ $(document).ready(function(){
     newOrder = new GetPizza(pName,pSize,pCrust,pTopping,total);
     $("#ordersmade").append(`<tr><td id="pizzaname">`+newOrder.name +`</td><td id="pizzasize"> `+ newOrder.size +`</td><td id="pizzasize"> `+ newOrder.crust +`</td><td id="pizzasize"> `+ newOrder.topping +`</td><td id="pizzasize"> `+ newOrder.total +`</td></tr>`);
     alert(newOrder);
+  })
+
+  $("button#checkout").click(function(){
+    $("button#checkout").hide();
+    $("button.addPizza").hide();
+    $("button#deliver").slideDown(1000);
+    $("#pizzatotal").append("Your bill is ksh. " +  checkoutTotal);
+  })
+
+  // home button
+  $("button.deliver").click(function(){
+    $(".pizzatable").hide();
+    
   })
   })
 })
