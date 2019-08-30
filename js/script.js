@@ -155,7 +155,17 @@ $(document).ready(function(){
   // home button
   $("button.deliver").click(function(){
     $(".pizzatable").hide();
-    
+    $(".choise h2").hide();
+    $(".delivery").slideDown(1000);
+    $("#addedprice").hide();
+    $("button.deliver").hide();
+    $("#pizzatotal").hide();
+
+    let deliveryAmount = checkoutTotal + 150;
+    alert(deliveryAmount);
+    console.log("You will pay sh. "+deliceryAmount+" on delivery");
+    $("#totalbill").append("Your bill plus delivery fee is: "+ deliveryAmount);
   })
+  
   })
 })
