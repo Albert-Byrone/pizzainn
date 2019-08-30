@@ -12,7 +12,8 @@ function GetPizza (name,size,crust,topping,total){
 };
 // proceed button
 $(document).ready(function(){
-  $("button.proceed").click(function(){
+  $("button.proceed").click(function(event){
+    // event.preventDefault();
     let pName = $(".name selected:option").val();
     let pSize = $("#size option:selected").val();
     let pCrust = $("#crust option:selected").val();
@@ -60,7 +61,7 @@ $(document).ready(function(){
         console.log("error");
     }
 
-  let topping_value = pTopping.length * 50;
+  let topping_value = pTopping.length * 100;
 
   if((pSize == "0") && (pCrust == "0")){
     $("button.proceed").show();
@@ -76,5 +77,23 @@ $(document).ready(function(){
   }
 
   total = price + c_price + topping_value;
+  alert(total);
+  let checkoutTotal = 0;
+  checkoutTotal = checkoutTotal + total;
+
+  $("#pizzaname").html($(".name option:selected").val());
+  $("#pizzasize").html( $("#size option:selected").val());
+  $("#pizzacrust").html($("#crust option:selected").val());
+  $("#pizzatopping").html(ptopping.join(", "));
+  $("#totals").html(total);
+
+  // add button
+  $("button.addPizza").click(function(){
+    let pName = $(".name selected:option").val();
+    let pSize = $("#size option:selected").val();
+    let pCrust = $("#crust option:selected").val();
+    let pTopping = []; 
+    
+  })
   })
 })
