@@ -13,7 +13,7 @@ function GetPizza (name,size,crust,topping,total){
 // proceed button
 $(document).ready(function(){
   $("button.proceed").click(function(event){
-    event.preventDefault();
+    
     let pName = $(".name option:selected").val();
     let pSize = $("#size option:selected").val();
     let pCrust = $("#crust option:selected").val();
@@ -166,6 +166,29 @@ $(document).ready(function(){
     console.log("You will pay sh. "+deliceryAmount+" on delivery");
     $("#totalbill").append("Your bill plus delivery fee is: "+ deliveryAmount);
   })
-  
+
+  $("button#final-order").click(function(event){
+    event.preventDefault();
+    $("#pizzatotal").hide();
+    $(".delivery").hide();
+    $("button#final-order").hide();
+    let deliceryAmount = checkoutTotal+ 150;
+
+    let person = $("input#name").val();
+    let phone = $("input#phone").val();
+    let location = $("input#location").val();
+
+    if ($("input#name").val() && $("input#phone").val() && $("input#location").val()!=""){
+      $("#finallmessage").append(person+", We have recieved your order and the delivery wil be made  at  "+location+ ". Prepare ksh. "+ deliceryAmount);
+      $("#totalbill").hide();
+      $("#finallmessage").slideDown(1200);
+    }else{
+      alert("Please fill in the deliver details");
+      $(".delivery").show();
+      $("button#final-order").show();
+    }
+
+  })
+  event.preventDefault();
   })
 })
