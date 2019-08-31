@@ -145,7 +145,7 @@ nav .navbar{
   padding-left: 10%;
   font-size: 28px;
 }
-#information{
+#infor{
   padding-top: 5%;
   font-size: 22px;
   padding-right: 8%;
@@ -188,4 +188,20 @@ td,th{
   display: none;
   padding-left: 2%;
   padding-right: 2%;
+}
+
+.d-flex{
+  display: flex !important;
+}
+.arrow
+{
+  position: relative;
+  left: 50%;
+  top: 90%;
+  margin-left:-20px;
+  
+}
+
+.bounce {
+  animation: bounce 2s infinite;
 }
