@@ -77,7 +77,6 @@ $(document).ready(function(){
   }
 
   total = price + c_price + topping_value;
-  // alert(total);
   let checkoutTotal = 0;
   checkoutTotal = checkoutTotal + total;
 
@@ -133,16 +132,14 @@ $(document).ready(function(){
     }
 
     let topping_value = pTopping.length * 100;
-    // alert("toppins value" + topping_value);
     total = price + c_price + topping_value;
-    // alert(total);
+
 
     checkoutTotal = checkoutTotal + total;
-    // alert(checkoutTotal);
+   
 
     newOrder = new GetPizza(pName,pSize,pCrust,pTopping,total);
     $("#ordersmade").append(`<tr><td id="pizzaname">`+newOrder.name +`</td><td id="pizzasize"> `+ newOrder.size +`</td><td id="pizzasize"> `+ newOrder.crust +`</td><td id="pizzasize"> `+ newOrder.topping +`</td><td id="pizzasize"> `+ newOrder.total +`</td></tr>`);
-    // alert(newOrder);
   })
 
   $("button#checkout").click(function(){
@@ -162,8 +159,6 @@ $(document).ready(function(){
     $("#pizzatotal").hide();
 
     let deliveryAmount = checkoutTotal + 150;
-    // alert(deliveryAmount);
-    // console.log("You will pay sh. "+deliceryAmount+" on delivery");
     $("#totalbill").append("Your bill plus delivery fee is: "+ deliveryAmount);
   })
 
