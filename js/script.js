@@ -65,19 +65,19 @@ $(document).ready(function(){
 
   if((pSize == "0") && (pCrust == "0")){
     $("button.proceed").show();
-    $("#info").show();
+    $("#infor   ").show();
     $("div.choice").hide();
     alert("Please select the Pizza size and crust");
   }
   else {
 
     $("button.proceed").hide();
-    $("#info").show();
+    $("#infor").hide();
     $("div.choice").slideDown(1200);
   }
 
   total = price + c_price + topping_value;
-  alert(total);
+  // alert(total);
   let checkoutTotal = 0;
   checkoutTotal = checkoutTotal + total;
 
@@ -135,14 +135,14 @@ $(document).ready(function(){
     let topping_value = pTopping.length * 100;
     // alert("toppins value" + topping_value);
     total = price + c_price + topping_value;
-    alert(total);
+    // alert(total);
 
     checkoutTotal = checkoutTotal + total;
     // alert(checkoutTotal);
 
     newOrder = new GetPizza(pName,pSize,pCrust,pTopping,total);
     $("#ordersmade").append(`<tr><td id="pizzaname">`+newOrder.name +`</td><td id="pizzasize"> `+ newOrder.size +`</td><td id="pizzasize"> `+ newOrder.crust +`</td><td id="pizzasize"> `+ newOrder.topping +`</td><td id="pizzasize"> `+ newOrder.total +`</td></tr>`);
-    alert(newOrder);
+    // alert(newOrder);
   })
 
   $("button#checkout").click(function(){
@@ -155,15 +155,15 @@ $(document).ready(function(){
   // home button
   $("button.deliver").click(function(){
     $(".pizzatable").hide();
-    $(".choise h2").hide();
+    $(".choice h2").hide();
     $(".delivery").slideDown(1000);
     $("#addedprice").hide();
     $("button.deliver").hide();
     $("#pizzatotal").hide();
 
     let deliveryAmount = checkoutTotal + 150;
-    alert(deliveryAmount);
-    console.log("You will pay sh. "+deliceryAmount+" on delivery");
+    // alert(deliveryAmount);
+    // console.log("You will pay sh. "+deliceryAmount+" on delivery");
     $("#totalbill").append("Your bill plus delivery fee is: "+ deliveryAmount);
   })
 
